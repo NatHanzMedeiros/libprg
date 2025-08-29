@@ -1,15 +1,11 @@
 #ifndef LIBPRG_LIBPRG_H
 #define LIBPRG_LIBPRG_H
-
-typedef struct {
-    double value;
-    int error;
-} result_t;
-
-typedef enum { SUM, SUB } operation_t;
-
-result_t sub(double a, double b);
-result_t sum(double a, double b);
-result_t compute(double a, double b, operation_t op);
-
+typedef struct Pilha Pilha;
+Pilha *criarPilha(int capacidade);
+void destruirPilha(Pilha *p);
+int push(Pilha *p, int valor);
+int pop(Pilha *p);
+int topoPilha(Pilha *p);
+int tamanhoPilha(Pilha *p);
+int imprimirPilha(Pilha *p);
 #endif
