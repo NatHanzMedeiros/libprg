@@ -36,7 +36,7 @@ void destruirPilha(Pilha *p) {
 
 int push(Pilha *p, int valor) {
     if ((*p).topo == (*p).capacidade - 1) {
-        printf("Sua pilha esta cheia!\n");
+        //printf("Sua pilha esta cheia!\n");
         return -1;
     }
     (*p).topo++;
@@ -47,7 +47,7 @@ int push(Pilha *p, int valor) {
 
 int pop(Pilha *p) {
     if ((*p).topo == -1) {
-        printf("Sua está pilha vazia!\n");
+        //printf("Sua está pilha vazia!\n");
         return -1;
     }
 
@@ -59,7 +59,7 @@ int pop(Pilha *p) {
 }
 int topoPilha(Pilha *p) {
     if ((*p).topo == -1) {
-        printf("Sua pilha esta vazia!\n");
+        //printf("Sua pilha esta vazia!\n");
         return -1;
     }
     return (*p).elementos[(*p).topo];
@@ -71,12 +71,12 @@ int tamanhoPilha(Pilha *p) {
 
 int imprimirPilha(Pilha *p) {
     if ((*p).topo == -1) {
-    printf("Sua pilha esta vazia!\n");
+    //printf("Sua pilha esta vazia!\n");
     return -1;
     }
 
     for (int i = (*p).topo; i >= 0; i--) {
-        printf("Sua pilha contém estes elementos %d\n", *((*p).elementos + i));
+        printf("%d\n", *((*p).elementos + i));
     }
     return 0;
 }
