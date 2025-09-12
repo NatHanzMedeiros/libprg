@@ -50,7 +50,13 @@ int Desenfileirar(Fila *p) {
     return valor_removido;
 }
 
+int fimFila(Fila *p) {
+    return (*p).fim - 1;
+}
+
 void destruirFila(Fila *p) {
     free((*p).elementos);
     free(p);
 }
+
+

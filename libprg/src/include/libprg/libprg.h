@@ -19,4 +19,5 @@ bool filaCheia(Fila *p);
 bool filaVazia(Fila *p);
 int Desenfileirar(Fila *p);
 void destruirFila(Fila *p);
+int fimFila(Fila *p);
 #endif
