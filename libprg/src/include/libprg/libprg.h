@@ -17,4 +17,6 @@ Fila *criarFila(int capacidade);
 void Enfileirar(Fila *p, int valor);
 bool filaCheia(Fila *p);
 bool filaVazia(Fila *p);
+int Desenfileirar(Fila *p);
+void destruirFila(Fila *p);
 #endif

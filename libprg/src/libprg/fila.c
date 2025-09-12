@@ -44,8 +44,10 @@ bool filaVazia(Fila *p) {
 }
 
 int Desenfileirar(Fila *p) {
-    return (*p).elementos[(*p).inicio];
-
+    int valor_removido = (*p).elementos[(*p).inicio];
+    (*p).inicio = ((*p).inicio + 1) % (*p).capacidade;
+    (*p).tamanho--;
+    return valor_removido;
 }
 
 void destruirFila(Fila *p) {
