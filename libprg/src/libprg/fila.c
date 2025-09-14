@@ -67,6 +67,17 @@ int tamanhoFila(Fila *p) {
     return (*p).tamanho;
 }
 
+int imprimirFila(Fila *p) {
+    if (filaVazia(p)) {
+        exit(EXIT_FAILURE);
+    }
+
+    for (int i = 0; i < (*p).capacidade; i++) {
+        printf("%d\n", *((*p).elementos + i));
+    }
+
+}
+
 void destruirFila(Fila *p) {
     free((*p).elementos);
     free(p);
