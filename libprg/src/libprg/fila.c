@@ -63,6 +63,10 @@ int fimFila(Fila *p) {
     return (*p).elementos[indice_fim];
 }
 
+int tamanhoFila(Fila *p) {
+    return (*p).tamanho;
+}
+
 void destruirFila(Fila *p) {
     free((*p).elementos);
     free(p);
