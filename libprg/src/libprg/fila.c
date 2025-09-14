@@ -55,6 +55,10 @@ int Desenfileirar(Fila *p) {
 }
 
 int fimFila(Fila *p) {
+    if (filaVazia(p)) {
+        exit(EXIT_FAILURE);
+    }
+
     int indice_fim = ((*p).fim - 1 + (*p).capacidade) % (*p).capacidade;
     return (*p).elementos[indice_fim];
 }
