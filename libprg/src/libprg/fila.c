@@ -22,6 +22,7 @@ Fila *criarFila(int capacidade) {
     (*p).inicio = 0;
     (*p).fim = 0;
     (*p).elementos = 0;
+    (*p).tamanho = 0;
     return p;
 }
 
