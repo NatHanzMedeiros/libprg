@@ -20,4 +20,5 @@ bool filaVazia(Fila *p);
 int Desenfileirar(Fila *p);
 void destruirFila(Fila *p);
 int fimFila(Fila *p);
+int tamanhoFila(Fila *p);
 #endif
