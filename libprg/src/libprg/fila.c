@@ -25,7 +25,7 @@ Fila *criarFila(int capacidade) {
     return p;
 }
 
-void Enfileirar(Fila *p, int valor) {
+int Enfileirar(Fila *p, int valor) {
     if (filaCheia(p)) {
         exit(EXIT_FAILURE);
     }
@@ -33,19 +33,20 @@ void Enfileirar(Fila *p, int valor) {
     (*p).elementos[(*p).fim] = valor;
     (*p).fim ++;
     (*p).tamanho++;
+    return 0;
 }
 
-bool filaCheia(Fila *p) {
+bool filaCheia(const Fila *p) {
     return (*p).tamanho >= (*p).capacidade;
 }
 
-bool filaVazia(Fila *p) {
+bool filaVazia(const Fila *p) {
     return (*p).tamanho == 0;
 }
 
 int Desenfileirar(Fila *p) {
     if (filaVazia(p)) {
-        exit(EXIT_FAILURE);
+        return -1;
     }
 
     int valor_removido = (*p).elementos[(*p).inicio];
@@ -54,22 +55,22 @@ int Desenfileirar(Fila *p) {
     return valor_removido;
 }
 
-int fimFila(Fila *p) {
+int fimFila(const Fila *p) {
     if (filaVazia(p)) {
-        exit(EXIT_FAILURE);
+        return -1;
     }
 
     int indice_fim = ((*p).fim - 1 + (*p).capacidade) % (*p).capacidade;
     return (*p).elementos[indice_fim];
 }
 
-int tamanhoFila(Fila *p) {
+int tamanhoFila(const Fila *p) {
     return (*p).tamanho;
 }
 
-int imprimirFila(Fila *p) {
+int imprimirFila(const Fila *p) {
     if (filaVazia(p)) {
-        exit(EXIT_FAILURE);
+        return -1;
     }
 
     for (int i = (*p).inicio; i < (*p).fim; i++) {
