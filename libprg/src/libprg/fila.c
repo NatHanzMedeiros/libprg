@@ -76,7 +76,6 @@ int imprimirFila(Fila *p) {
         printf("%d\n", *((*p).elementos + i));
 
     }
-
 }
 
 void destruirFila(Fila *p) {
