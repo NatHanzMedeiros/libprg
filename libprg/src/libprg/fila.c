@@ -72,8 +72,9 @@ int imprimirFila(Fila *p) {
         exit(EXIT_FAILURE);
     }
 
-    for (int i = 0; i < (*p).capacidade; i++) {
+    for (int i = (*p).inicio; i < (*p).fim; i++) {
         printf("%d\n", *((*p).elementos + i));
+
     }
 
 }
