@@ -46,7 +46,7 @@ bool filaVazia(const Fila *p) {
 
 int Desenfileirar(Fila *p) {
     if (filaVazia(p)) {
-        return -1;
+        exit(EXIT_FAILURE);
     }
 
     int valor_removido = (*p).elementos[(*p).inicio];
@@ -57,7 +57,7 @@ int Desenfileirar(Fila *p) {
 
 int fimFila(const Fila *p) {
     if (filaVazia(p)) {
-        return -1;
+    exit(EXIT_FAILURE);
     }
 
     int indice_fim = ((*p).fim - 1 + (*p).capacidade) % (*p).capacidade;
@@ -70,7 +70,7 @@ int tamanhoFila(const Fila *p) {
 
 int imprimirFila(const Fila *p) {
     if (filaVazia(p)) {
-        return -1;
+    exit(EXIT_FAILURE);
     }
 
     for (int i = (*p).inicio; i < (*p).fim; i++) {
