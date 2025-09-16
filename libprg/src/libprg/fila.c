@@ -50,9 +50,10 @@ int Desenfileirar(Fila *p) {
     }
 
     int valor_removido = (*p).elementos[(*p).inicio];
-    (*p).inicio = ((*p).inicio + 1) % (*p).capacidade;
+    (*p).inicio = ((*p).inicio + 1) % (*p).capacidade; // Aqui é como se fosse (*p).inicio++; mas não pode ser porque não é circular
     (*p).tamanho--;
     return valor_removido;
+    //Em Desenfileirar, soma se um no inicio e subtrai se um no tamanho.
 }
 
 int fimFila(const Fila *p) {
