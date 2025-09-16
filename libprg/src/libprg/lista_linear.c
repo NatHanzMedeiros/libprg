@@ -45,9 +45,7 @@ int removerElemento(ListaLinear_t *p, int valor) {
     for (int i = 0; i < (*p).tamanho; i++) {
         if (*((*p).elementos + i) == valor) {
             int removido = *((*p).elementos + i);
-
-
-
+           *((*p).elementos + i) = (*p).elementos[(*p).tamanho - 1];
             (*p).tamanho--;
             return removido;
         }
