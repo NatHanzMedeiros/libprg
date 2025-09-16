@@ -41,13 +41,14 @@ int removerElemento(ListaLinear_t *p, int valor) {
     if (listaVazia(p)) {
         exit(EXIT_FAILURE);
     }
-    int valor_removido = (*p).elementos[(*p).tamanho - 1];
+
     for (int i = 0; i < (*p).tamanho; i++) {
         if (*((*p).elementos + i) == valor) {
+            int removido = *((*p).elementos + i);
             (*p).tamanho--;
+            return removido;
         }
     }
-    return valor_removido;
 }
 
 void destruirLista(ListaLinear_t *p) {

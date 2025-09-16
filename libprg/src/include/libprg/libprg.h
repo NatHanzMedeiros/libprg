@@ -25,7 +25,7 @@ int imprimirFila(const Fila *p);
 
 //LISTA_LINEAR
 typedef struct ListaLinear ListaLinear_t;
-ListaLinear_t *criarLista(int capacidade, int tamanho);
+ListaLinear_t *criarLista(int capacidade);
 bool listaCheia(ListaLinear_t *p);
 int inserirElemento(ListaLinear_t *p, int valor);
 bool listaVazia(ListaLinear_t *p);
