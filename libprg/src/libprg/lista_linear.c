@@ -12,7 +12,7 @@ typedef struct ListaLinear {
     int tamanho;
 }ListaLinear_t;
 
-ListaLinear_t *criarLista(int capacidade, int tamanho) {
+ListaLinear_t *criarLista(int capacidade) {
     ListaLinear_t *p;
     p = malloc(sizeof(ListaLinear_t));
     (*p).elementos = malloc(sizeof(int) * capacidade);
