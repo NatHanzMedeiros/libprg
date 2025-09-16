@@ -45,10 +45,26 @@ int removerElemento(ListaLinear_t *p, int valor) {
     for (int i = 0; i < (*p).tamanho; i++) {
         if (*((*p).elementos + i) == valor) {
             int removido = *((*p).elementos + i);
+
+
+
             (*p).tamanho--;
             return removido;
         }
     }
+    return -1;
+}
+
+void imprimirLista(ListaLinear_t *p) {
+    if (listaVazia(p)) {
+        printf("Lista vazia!\n");
+        return;
+    }
+    printf("Lista: ");
+    for (int i = 0; i < p->tamanho; i++) {
+        printf("%d ", p->elementos[i]);
+    }
+    printf("\n");
 }
 
 void destruirLista(ListaLinear_t *p) {
