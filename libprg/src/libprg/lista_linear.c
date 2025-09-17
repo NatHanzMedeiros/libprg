@@ -69,7 +69,7 @@ int primeiroElemento(ListaLinear_t *p) {
     if (listaVazia(p)) {
         exit(EXIT_FAILURE);
     }
-   int primeiro = *((*p).elementos - (*p).tamanho);
+   int primeiro = *((*p).elementos + 0);
    return primeiro;
 }
 
