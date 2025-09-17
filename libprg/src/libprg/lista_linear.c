@@ -59,10 +59,18 @@ void imprimirLista(ListaLinear_t *p) {
         return;
     }
     printf("Lista: ");
-    for (int i = 0; i < p->tamanho; i++) {
-        printf("%d ", p->elementos[i]);
+    for (int i = 0; i < (*p).tamanho; i++) {
+        printf("%d ", (*p).elementos[i]);
     }
     printf("\n");
+}
+
+int primeiroElemento(ListaLinear_t *p) {
+    if (listaVazia(p)) {
+        exit(EXIT_FAILURE);
+    }
+   int primeiro = (*p).elementos[(*p).tamanho - (*p).capacidade];
+   return primeiro;
 }
 
 void destruirLista(ListaLinear_t *p) {

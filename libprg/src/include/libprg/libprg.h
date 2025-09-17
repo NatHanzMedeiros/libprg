@@ -32,4 +32,5 @@ bool listaVazia(ListaLinear_t *p);
 int removerElemento(ListaLinear_t *p, int valor);
 void destruirLista(ListaLinear_t *p);
 void imprimirLista(ListaLinear_t *p);
+int primeiroElemento(ListaLinear_t *p);
 #endif
