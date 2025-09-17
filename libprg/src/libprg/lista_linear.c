@@ -73,6 +73,13 @@ int primeiroElemento(ListaLinear_t *p) {
    return primeiro;
 }
 
+int tamanhoLista(ListaLinear_t *p) {
+    if (listaVazia(p)) {
+        exit(EXIT_FAILURE);
+    }
+    return (*p).tamanho;
+}
+
 void destruirLista(ListaLinear_t *p) {
     free((*p).elementos);
     free(p);
