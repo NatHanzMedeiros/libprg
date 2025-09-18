@@ -72,9 +72,6 @@ int primeiroElemento(ListaLinear_t *p) {
 }
 
 int tamanhoLista(ListaLinear_t *p) {
-    if (listaVazia(p)) {
-        exit(EXIT_FAILURE);
-    }
     return (*p).tamanho;
 }
 
