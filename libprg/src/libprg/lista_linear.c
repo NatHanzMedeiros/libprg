@@ -45,7 +45,7 @@ int inserirElemento(ListaLinear_t *p, int valor) {
         *((*p).elementos + i + 1) = valor;
     }
     (*p).tamanho++;
-    return 1;
+    return 0;
 }
 
 int removerElemento(ListaLinear_t *p, int valor) {
@@ -67,7 +67,7 @@ int removerElemento(ListaLinear_t *p, int valor) {
             return removido;
         }
     }
-    return -1;
+    return 0;
 }
 
 void imprimirLista(ListaLinear_t *p) {
@@ -125,5 +125,5 @@ int buscarElemento(ListaLinear_t *p, int valor, bool buscaLinear) {
             }
         }
     }
-    return -1;
+    return 0;
 }
