@@ -30,7 +30,7 @@ bool listaCheia(ListaLinear_t *p);
 int inserirElemento(ListaLinear_t *p, int valor);
 bool listaVazia(ListaLinear_t *p);
 int removerElemento(ListaLinear_t *p, int valor);
-int buscarElemento(ListaLinear_t *p, int valor);
+int buscarElemento(ListaLinear_t *p, int valor, bool buscaLinear);
 void destruirLista(ListaLinear_t *p);
 void imprimirLista(ListaLinear_t *p);
 int primeiroElemento(ListaLinear_t *p);

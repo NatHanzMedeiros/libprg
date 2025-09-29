@@ -98,11 +98,11 @@ void destruirLista(ListaLinear_t *p) {
     free(p);
 }
 
-int buscarElemento(ListaLinear_t *p, int valor) {
+int buscarElemento(ListaLinear_t *p, int valor, bool buscaLinear) {
     if (listaVazia(p)) {
         exit(EXIT_FAILURE);
     }
-    if ((*p).ordenada == false) {
+    if (buscaLinear == true) {
 
         for (int i = 0; i < (*p).tamanho; i++) {
             if (*((*p).elementos + i) == valor) {
