@@ -50,7 +50,7 @@ int inserirElemento(ListaLinear_t *p, int valor) {
 
 int removerElemento(ListaLinear_t *p, int valor) {
     if (listaVazia(p)) {
-        exit(EXIT_FAILURE);
+        return -1;
     }
     for (int i = 0; i < (*p).tamanho; i++) {
         if (*((*p).elementos + i) == valor) {
@@ -100,7 +100,7 @@ void destruirLista(ListaLinear_t *p) {
 
 int buscarElemento(ListaLinear_t *p, int valor, bool buscaLinear) {
     if (listaVazia(p)) {
-        exit(EXIT_FAILURE);
+        return -1;
     }
     if (buscaLinear == true) {
 
