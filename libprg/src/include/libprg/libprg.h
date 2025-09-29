@@ -25,11 +25,12 @@ int imprimirFila(const Fila *p);
 
 //LISTA_LINEAR
 typedef struct ListaLinear ListaLinear_t;
-ListaLinear_t *criarLista(int capacidade);
+ListaLinear_t *criarLista(int capacidade, bool ordenada);
 bool listaCheia(ListaLinear_t *p);
 int inserirElemento(ListaLinear_t *p, int valor);
 bool listaVazia(ListaLinear_t *p);
 int removerElemento(ListaLinear_t *p, int valor);
+int buscarElemento(ListaLinear_t *p, int valor);
 void destruirLista(ListaLinear_t *p);
 void imprimirLista(ListaLinear_t *p);
 int primeiroElemento(ListaLinear_t *p);

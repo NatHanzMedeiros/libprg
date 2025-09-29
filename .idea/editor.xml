@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BackendCodeEditorSettings">
+    <option name="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=A9FEAB73_002D3157_002D5965_002DAB8B_002D46A6EB277D5E_002Fd_003Alibprg_002Fd_003Asrc_002Fd_003Ainclude_002Fd_003Alibprg_002Ff_003Alibprg_002Eh/@EntryIndexedValue" value="ForceIncluded" type="string" />
+    <option name="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=A9FEAB73_002D3157_002D5965_002DAB8B_002D46A6EB277D5E_002Fd_003Alibprg_002Fd_003Asrc_002Fd_003Alibprg_002Ff_003Alista_005Flinear_002Ec/@EntryIndexedValue" value="ForceIncluded" type="string" />
     <option name="/Default/CodeInspection/Highlighting/InspectionSeverities/=CDeclarationWithImplicitIntType/@EntryIndexedValue" value="WARNING" type="string" />
     <option name="/Default/CodeInspection/Highlighting/InspectionSeverities/=CommentTypo/@EntryIndexedValue" value="DO_NOT_SHOW" type="string" />
     <option name="/Default/CodeInspection/Highlighting/InspectionSeverities/=ConstevalIfIsAlwaysConstant/@EntryIndexedValue" value="WARNING" type="string" />
