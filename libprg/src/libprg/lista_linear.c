@@ -50,7 +50,7 @@ int inserirElemento(ListaLinear_t *p, int valor) {
 
 int removerElemento(ListaLinear_t *p, int valor) {
     if (listaVazia(p)) {
-        return -1;
+        exit(EXIT_FAILURE);
     }
     for (int i = 0; i < (*p).tamanho; i++) {
         if (*((*p).elementos + i) == valor) {
@@ -67,7 +67,7 @@ int removerElemento(ListaLinear_t *p, int valor) {
             return removido;
         }
     }
-    return -1;
+
 }
 
 void imprimirLista(ListaLinear_t *p) {
@@ -100,7 +100,7 @@ void destruirLista(ListaLinear_t *p) {
 
 int buscarElemento(ListaLinear_t *p, int valor, bool buscaLinear) {
     if (listaVazia(p)) {
-        return -1;
+        exit(EXIT_FAILURE);
     }
     if (buscaLinear == true) {
 
