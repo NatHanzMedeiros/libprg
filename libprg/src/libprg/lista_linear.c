@@ -55,10 +55,10 @@ int removerElemento(ListaLinear_t *p, int valor) {
     for (int i = 0; i < (*p).tamanho; i++) {
         if (*((*p).elementos + i) == valor) {
             int removido = *((*p).elementos + i);
+            if ((*p).ordenada == false) {
+                *((*p).elementos + i) = *((*p).elementos + (*p).tamanho - 1); }// Uso não ordenado, aqui ele apenas esta substituindo o ultimo valor da lista no indice de qual foi retirado!
 
-            if ((*p).ordenada == true) {
-                *((*p).elementos + i) = *((*p).elementos + (*p).tamanho - 1); // Uso não ordenado, aqui ele apenas esta substituindo o ultimo valor da lista no indice de qual foi retirado!
-            } else {
+            else {
                 for (int j = i; j < (*p).tamanho - 1; j++) {
                     *((*p).elementos + j) = *((*p).elementos + j + 1); // Uso ordenado, agora a ordem importa, então aqui ele desloca os valores mais a direta para esquerda, mas no final o o ultimo elemento fica duplicado, então pra não ficar duplicado diminuimos -1 no tamanho!
                 }
@@ -67,7 +67,6 @@ int removerElemento(ListaLinear_t *p, int valor) {
             return removido;
         }
     }
-
 }
 
 void imprimirLista(ListaLinear_t *p) {
