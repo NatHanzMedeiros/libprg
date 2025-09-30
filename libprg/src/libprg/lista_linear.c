@@ -102,7 +102,6 @@ int buscarElemento(ListaLinear_t *p, int valor, bool buscaLinear) {
         exit(EXIT_FAILURE);
     }
     if (buscaLinear == true) {
-
         for (int i = 0; i < (*p).tamanho; i++) {
             if (*((*p).elementos + i) == valor) {
                 return i;
@@ -124,5 +123,5 @@ int buscarElemento(ListaLinear_t *p, int valor, bool buscaLinear) {
             }
         }
     }
-    return 0;
+    return -1;
 }
