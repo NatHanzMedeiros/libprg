@@ -39,12 +39,19 @@ no_t* buscar_ListaEncadeada(no_t **inicio, int valor) {
 void remover_ListaEncadeada(no_t **inicio, int valor) {
     no_t *atual = *inicio;
     no_t *anterior = NULL;
-    while (atual) {
+    while (atual != NULL) {
         if ((*atual).valor == valor) {
-           (*anterior).proximo = (*atual).proximo;
+            if (anterior == NULL) {
+                *inicio = (*atual).proximo;
+            } else {
+                (*anterior).proximo = (*atual).proximo;
+            }
+            free(atual);
+            return;
         }
+        anterior = atual;
+        atual = (*atual).proximo;
     }
-    free(atual);
 }
 
 void destruir_ListaEncadeada(no_t** inicio) {
