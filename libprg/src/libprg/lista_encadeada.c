@@ -58,6 +58,15 @@ int primero_ListaEncadeada(no_t **inicio) {
     return (*inicio)->valor;
 }
 
+int tamanho_ListaEncadeada(no_t **inicio) {
+    no_t *atual = *inicio;
+    int i = 0;
+    for (i ; (*atual).proximo != NULL; i++) {
+
+    }
+    return i;
+}
+
 void destruir_ListaEncadeada(no_t** inicio) {
     no_t *atual = *inicio;
     while (atual) {
