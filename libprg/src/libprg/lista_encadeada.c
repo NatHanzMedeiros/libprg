@@ -12,56 +12,46 @@ typedef struct no {
     struct no *proximo;
 } no_t;
 
-no_t *criar_lista_enc(int valor) {
+no_t *criar_ListaEncadeada(int valor) {
     no_t *no = malloc(sizeof(no_t));
-    no->valor = valor;
-    no->proximo = NULL;
-    return  no;
+    (*no).valor = valor;
+    (*no).proximo = NULL;
+    return no;
 }
 
-void adicionar_lista_enc(no_t **inicio, int valor) {
-
-    no_t* novo_no = criar_lista_enc(valor);
-    novo_no->proximo = *inicio;
-    *inicio = novo_no;
-
+void adicionar_ListaEncadeada(no_t **inicio, int valor) { // Ou seja, **inicio vai apontar para outro ponteiro que eu chamar na main.
+    no_t *novo_no = criar_ListaEncadeada(valor);          // Exemplificação, "minha_lista"  é um ponteiro do tipo "no_t"  a variavel "minha_lista" tem endereço = 0x100 e armazena(aponta) para o endereço 0x200.
+    (*novo_no).proximo = *inicio;                         // Então quando criamos "(*novo_no).proximo = *inicio" estamos dizendo que o campo "proximo" desse "novo_no" vai receber o que tem guardado na variavel
+    *inicio = novo_no;                                    //"inicio" que é o endereço de "minha_lista" mas como é "*inicio", ele faz desreferenciar esse endereço logo vamos receber o que esse endereço de "minha_lista" guarda!
 }
 
-no_t* buscar_lista_enc(no_t** inicio, int valor) {
-
-    no_t* atual = *inicio;
-
+no_t* buscar_ListaEncadeada(no_t **inicio, int valor) {
+    no_t *atual = *inicio;
     while (atual != NULL) {
-        if (atual->valor == valor) {
+        if ((*atual).valor == valor) {
             return atual;
-        }else {
-            atual = atual->proximo;
         }
+            atual = (*atual).proximo;
     }
     return NULL;
 }
 
-void remover_lista_enc(no_t** inicio, int valor) {
-    no_t* atual = *inicio;
-    no_t* anterior = NULL;
-
+void remover_ListaEncadeada(no_t **inicio, int valor) {
+    no_t *atual = *inicio;
+    no_t *anterior = NULL;
     while (atual) {
-        if (atual->valor == valor) {
-
-            anterior->proximo = atual->proximo;
+        if ((*atual).valor == valor) {
+           (*anterior).proximo = (*atual).proximo;
         }
     }
     free(atual);
 }
 
-void destruir_lista_enc(no_t** inicio) {
-
-    no_t* atual = *inicio;
-
+void destruir_ListaEncadeada(no_t** inicio) {
+    no_t *atual = *inicio;
     while (atual) {
-        no_t* proximo = atual->proximo;
+        no_t *proximo = (*atual).proximo;
         free(atual);
-        if (proximo == *inicio) break;
         atual = proximo;
     }
 }

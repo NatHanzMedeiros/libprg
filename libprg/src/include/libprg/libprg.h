@@ -38,10 +38,10 @@ int tamanhoLista(ListaLinear_t *p);
 
 //LISTA_ENCADEADA
 typedef struct no no_t;
-no_t *criar_lista_enc(int valor);
-void adicionar_lista_enc(no_t **inicio, int valor);
-no_t* buscar_lista_enc(no_t** inicio, int valor);
-void remover_lista_enc(no_t** inicio, int valor);
-void destruir_lista_enc(no_t** inicio);
+no_t *criar_ListaEncadeada(int valor);
+void adicionar_ListaEncadeada(no_t **inicio, int valor);
+no_t* buscar_ListaEncadeada(no_t** inicio, int valor);
+void remover_ListaEncadeada(no_t** inicio, int valor);
+void destruir_ListaEncadeada(no_t** inicio);
 
 #endif
