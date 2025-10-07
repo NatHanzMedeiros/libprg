@@ -61,7 +61,10 @@ int primeiro_ListaEncadeada(no_t *inicio) { // A diferença aqui é que "no_t *i
 
 int tamanho_ListaEncadeada(no_t *inicio) {
     int i = 0;
-    for (i; (*inicio).proximo != NULL; i++) {
+    no_t *atual;
+    atual = inicio;
+    for (atual; atual != NULL; atual = (*atual).proximo) {
+        i++;
     }
     return i;
 }
