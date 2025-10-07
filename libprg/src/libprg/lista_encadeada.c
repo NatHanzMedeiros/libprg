@@ -70,14 +70,11 @@ int tamanho_ListaEncadeada(no_t *inicio) {
 }
 
 int imprimir_ListaEncadeada(no_t *inicio) {
-    int i = 0;
     no_t *atual;
     atual = inicio;
     for (atual; atual != NULL; atual = (*atual).proximo) {
         printf("%d ", (*atual).valor);
     }
-    return i;
-
 }
 
 void destruir_ListaEncadeada(no_t** inicio) {
