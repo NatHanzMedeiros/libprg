@@ -54,6 +54,10 @@ void remover_ListaEncadeada(no_t **inicio, int valor) {
     }
 }
 
+int primero_ListaEncadeada(no_t **inicio) {
+    return (*inicio)->valor;
+}
+
 void destruir_ListaEncadeada(no_t** inicio) {
     no_t *atual = *inicio;
     while (atual) {
