@@ -35,4 +35,13 @@ void destruirLista(ListaLinear_t *p);
 void imprimirLista(ListaLinear_t *p);
 int primeiroElemento(ListaLinear_t *p);
 int tamanhoLista(ListaLinear_t *p);
+
+//LISTA_ENCADEADA
+typedef struct no no_t;
+no_t *criar_lista_enc(int valor);
+void adicionar_lista_enc(no_t **inicio, int valor);
+no_t* buscar_lista_enc(no_t** inicio, int valor);
+void remover_lista_enc(no_t** inicio, int valor);
+void destruir_lista_enc(no_t** inicio);
+
 #endif

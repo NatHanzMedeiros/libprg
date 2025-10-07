@@ -112,7 +112,6 @@ int buscarElemento(ListaLinear_t *p, int valor, bool buscaLinear) {
         int direita = (*p).tamanho - 1;
         for (; esquerda <= direita;) {
             int meio = (esquerda + direita) / 2;
-
             if (*((*p).elementos + meio) == valor) {
                 return meio;
             }
