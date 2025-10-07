@@ -54,15 +54,14 @@ void remover_ListaEncadeada(no_t **inicio, int valor) {
     }
 }
 
-int primero_ListaEncadeada(no_t **inicio) {
-    return (*inicio)->valor;
+int primeiro_ListaEncadeada(no_t *inicio) { // A diferença aqui é que "no_t *inicio", estou dizendo que "inicio" é um parametro do tipo ponteiro para "no_t",
+    if (inicio == NULL) return -1;          // ou seja quando eu criar na main a variavel "minhaListaEncadeada", e passar ela na função "primeiro_ListaEncadeada(minhaListaEncadeada)"
+    return (*inicio).valor;                 //eu vou estar "dando" o que minha variavel "minhaListaEncadeada" esta armazenando que é um endereço do primeiro nó, então por isso "*inicio".
 }
 
-int tamanho_ListaEncadeada(no_t **inicio) {
-    no_t *atual = *inicio;
+int tamanho_ListaEncadeada(no_t *inicio) {
     int i = 0;
-    for (i ; (*atual).proximo != NULL; i++) {
-
+    for (i; (*inicio).proximo != NULL; i++) {
     }
     return i;
 }

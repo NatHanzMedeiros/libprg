@@ -43,7 +43,7 @@ void adicionar_ListaEncadeada(no_t **inicio, int valor);
 no_t* buscar_ListaEncadeada(no_t** inicio, int valor);
 void remover_ListaEncadeada(no_t** inicio, int valor);
 void destruir_ListaEncadeada(no_t** inicio);
-int tamanho_ListaEncadeada(no_t **inicio);
-int primero_ListaEncadeada(no_t **inicio);
+int tamanho_ListaEncadeada(no_t *inicio);
+int primeiro_ListaEncadeada(no_t *inicio);
 
 #endif
