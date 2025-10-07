@@ -69,7 +69,7 @@ int tamanho_ListaEncadeada(no_t *inicio) {
     return i;
 }
 
-int imprimirListaEncadeada(no_t *inicio) {
+int imprimir_ListaEncadeada(no_t *inicio) {
     int i = 0;
     no_t *atual;
     atual = inicio;

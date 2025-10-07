@@ -45,5 +45,5 @@ void remover_ListaEncadeada(no_t** inicio, int valor);
 void destruir_ListaEncadeada(no_t** inicio);
 int tamanho_ListaEncadeada(no_t *inicio);
 int primeiro_ListaEncadeada(no_t *inicio);
-
+int imprimir_ListaEncadeada(no_t *inicio);
 #endif
