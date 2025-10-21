@@ -27,13 +27,34 @@ bool listaCheia(ListaLinear_t *p) {
     return (*p).tamanho == (*p).capacidade;
 }
 
+int buscar_na_posição(ListaLinear_t *p, int posicao) {
+    return *((*p).elementos + posicao);
+}
+
+int tratamentoPosicao(ListaLinear_t *p, int posicao) {
+    if (posicao > (*p).tamanho) return (*p).tamanho;
+    if (posicao < 0 ) return  0;
+}
+
+void inserir_na_posição(ListaLinear_t *p, int valor, int posicao) {
+    int indice =  tratamentoPosicao(p, posicao);
+    inserirElemento(p, *((*p).elementos + indice));
+    *((*p).elementos + posicao) = valor;
+}
+
+void remover_na_posição(ListaLinear_t *p, int posicao) {
+    int indice =  tratamentoPosicao(p, posicao);
+    removerElemento(p, *((*p).elementos + indice));
+}
+
 bool listaVazia(ListaLinear_t *p) {
     return (*p).tamanho == 0;
 }
 
 int inserirElemento(ListaLinear_t *p, int valor) {
     if (listaCheia(p)) {
-        exit(EXIT_FAILURE);
+        (*p).elementos = realloc((*p).elementos, sizeof(int) * (*p).capacidade * 2);
+        (*p).capacidade *= 2;
     }
     if ((*p).ordenada == false) {
         *((*p).elementos + (*p).tamanho) = valor;
