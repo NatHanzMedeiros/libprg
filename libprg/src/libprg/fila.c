@@ -78,6 +78,14 @@ int imprimirFila(const Fila *p) {
     }
 }
 
+int imprimirElemento( Fila *p, int posicao) {
+    if (filaVazia(p)) {
+        exit(EXIT_FAILURE);
+    }
+    int a =  *((*p).elementos + posicao);
+    return a;
+}
+
 void destruirFila(Fila *p) {
     free((*p).elementos);
     free(p);

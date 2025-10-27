@@ -22,6 +22,7 @@ void destruirFila(Fila *p);
 int fimFila(const Fila *p);
 int tamanhoFila(const Fila *p);
 int imprimirFila(const Fila *p);
+int imprimirElemento( Fila *p, int posicao);
 
 //LISTA_LINEAR
 typedef struct ListaLinear ListaLinear_t;
