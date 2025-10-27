@@ -78,7 +78,7 @@ int imprimirFila(const Fila *p) {
     }
 }
 
-int imprimirElemento( Fila *p, int posicao) {
+int imprimirElemento1( Fila *p, int posicao) {
     if (filaVazia(p)) {
         exit(EXIT_FAILURE);
     }
