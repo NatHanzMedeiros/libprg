@@ -82,9 +82,10 @@ int imprimirElemento1( Fila *p, int posicao) {
     if (filaVazia(p)) {
         exit(EXIT_FAILURE);
     }
-    int a =  *((*p).elementos + posicao);
-    return a;
+    int indice = ((*p).inicio + posicao) % (*p).capacidade;
+    return *((*p).elementos + indice);
 }
+
 
 void destruirFila(Fila *p) {
     free((*p).elementos);
