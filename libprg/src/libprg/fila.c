@@ -73,7 +73,7 @@ int imprimirFila(const Fila *p) {
     if (filaVazia(p)) {
     exit(EXIT_FAILURE);
     }
-    for (int i = (*p).inicio; i != (*p).fim; i++) {
+    for (int i = (*p).inicio; i < (*p).fim; i++) {
         printf("%d\n", *((*p).elementos + i));
     }
 }
