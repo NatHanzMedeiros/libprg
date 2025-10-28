@@ -30,8 +30,8 @@ int Enfileirar(Fila *p, int valor) {
         exit(EXIT_FAILURE);
     }
 
-    (*p).elementos[(*p).fim] = valor;
-    (*p).fim ++;
+    *((*p).elementos + (*p).fim) = valor;
+    (*p).fim = ((*p).fim + 1) % (*p).capacidade;
     (*p).tamanho++;
     return 0;
 }
