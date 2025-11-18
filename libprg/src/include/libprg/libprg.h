@@ -51,4 +51,9 @@ void destruir_ListaEncadeada(no_t** inicio);
 int tamanho_ListaEncadeada(no_t *inicio);
 int primeiro_ListaEncadeada(no_t *inicio);
 int imprimir_ListaEncadeada(no_t *inicio);
+
+//ALGORITIMOS_TROCA
+void bubble_sort(int *vetor, int n);
+void insertion_sort(int *vetor, int n);
+void selection_sort(int *vetor, int n);
 #endif

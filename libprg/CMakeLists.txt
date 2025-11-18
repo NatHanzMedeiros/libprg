@@ -10,6 +10,8 @@ set(SOURCES
 )
 
 add_library(libprg
+        src/libprg/alg_ord_troca.c
+        src/libprg/alg_ord_div.c
         src/libprg/lista_encadeada.c
         src/libprg/pilha.c
         src/libprg/fila.c
