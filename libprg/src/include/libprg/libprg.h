@@ -60,7 +60,9 @@ void selection_sort(int *vetor, int n);
 //ALGORITIMOS_DIV
 void merge_sort (int *vetor , int esquerda , int direita);
 void merge(int *vetor, int esquerda, int meio, int direita);
-
+void quick_sort(int *vetor, int inicio, int fim);
+int particiona(int *vetor, int inicio,int fim);
+void trocar_posicao(int *a, int *b);
 
 //ARVORE_BINARIA
 typedef struct arvoreBinaria no_arvoreB;
@@ -69,4 +71,5 @@ void destruir_no_arvore(no_arvoreB *no);
 no_arvoreB *inserir_na_arvore(no_arvoreB *raiz, int valor);
 bool busca_na_arvore(no_arvoreB *raiz, int valor);
 no_arvoreB *remover_valor_da_arvore(no_arvoreB *raiz, int valor);
+
 #endif

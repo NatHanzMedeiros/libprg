@@ -50,3 +50,34 @@ int i , j , k;
     }
     free(aux);
 }
+
+
+void trocar_posicao(int *a, int *b) {
+    int aux = *a;
+    *a = *b;
+    *b = aux;
+}
+
+int particiona(int *vetor, int inicio,int fim) {
+int pivo,i,j;
+    pivo = *(vetor + fim);
+    i = inicio -1;
+    for (j = inicio; j < fim -1; j++) {
+        if (*(vetor + j) <= pivo) {
+            i++;
+            trocar_posicao(vetor + i, vetor + j);
+        }
+    }
+    i++;
+    trocar_posicao(vetor + i, vetor + fim);
+    return i;
+}
+
+void quick_sort(int *vetor, int inicio, int fim) {
+    int p;
+    if  (inicio < fim) {
+        p = particiona(vetor,inicio,fim);
+        quick_sort(vetor,inicio,p-1);
+        quick_sort(vetor,p+1,fim);
+    }
+}
