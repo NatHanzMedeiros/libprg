@@ -2,7 +2,6 @@
 // Created by nathan1 on 15/11/2025.
 //
 #include "libprg/libprg.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 void merge_sort (int *vetor , int esquerda , int direita) {
