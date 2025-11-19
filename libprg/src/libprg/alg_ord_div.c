@@ -15,7 +15,6 @@ int meio;
 
     }
 }
-
 void merge(int *vetor, int esquerda, int meio, int direita) {
 int i , j , k;
     int *aux = malloc((direita - esquerda + 1) * sizeof(int));
@@ -33,13 +32,11 @@ int i , j , k;
         }
         k++;
     }
-
     while (i <= meio) {
         *(aux + k) = *(vetor + i);
         i++;
         k++;
     }
-
     while (j <= direita) {
         *(aux + k) = *(vetor + j);
         j++;
@@ -51,13 +48,12 @@ int i , j , k;
     free(aux);
 }
 
-
+//Quick_Sort
 void trocar_posicao(int *a, int *b) {
     int aux = *a;
     *a = *b;
     *b = aux;
 }
-
 int particiona(int *vetor, int inicio,int fim) {
 int pivo,i,j;
     pivo = *(vetor + fim);
@@ -72,7 +68,6 @@ int pivo,i,j;
     trocar_posicao(vetor + i, vetor + fim);
     return i;
 }
-
 void quick_sort(int *vetor, int inicio, int fim) {
     int p;
     if  (inicio < fim) {
