@@ -56,4 +56,17 @@ int imprimir_ListaEncadeada(no_t *inicio);
 void bubble_sort(int *vetor, int n);
 void insertion_sort(int *vetor, int n);
 void selection_sort(int *vetor, int n);
+
+//ALGORITIMOS_DIV
+void merge_sort (int *vetor , int esquerda , int direita);
+void merge(int *vetor, int esquerda, int meio, int direita);
+
+
+//ARVORE_BINARIA
+typedef struct arvoreBinaria no_arvoreB;
+no_arvoreB *criar_no_arvore(int valor);
+void destruir_no_arvore(no_arvoreB *no);
+no_arvoreB *inserir_na_arvore(no_arvoreB *raiz, int valor);
+bool busca_na_arvore(no_arvoreB *raiz, int valor);
+no_arvoreB *remover_valor_da_arvore(no_arvoreB *raiz, int valor);
 #endif
