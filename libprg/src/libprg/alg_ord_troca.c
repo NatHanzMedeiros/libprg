@@ -7,8 +7,8 @@
 void bubble_sort(int *vetor, int n) {
 int aux;
     for (int i = 0; i < n-1; i++) {
-        for (int j = 0 ; j < n-i-1; i++) {
-            if (*(vetor + j) < *(vetor + j +1)) {
+        for (int j = 0 ; j < n-i-1; j++) {
+            if (*(vetor + j) > *(vetor + j +1)) {
                 aux = *(vetor + j);
                 *(vetor + j)= *(vetor + j +1);
                 *(vetor + j +1) = aux;
@@ -26,7 +26,7 @@ void insertion_sort(int *vetor, int n) {
             *(vetor + j +1) = *(vetor + j);
             j--;
         }
-        *(vetor + j) = chave;
+        *(vetor + j +1 ) = chave;
     }
 }
 
